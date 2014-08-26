@@ -13,7 +13,7 @@
 # Notes:
 #   To use:
 #     Setup http://hostname/hubot/scoutapp-slack/%23ROOMNAME as
-#     your notification webook in scoutapp.com.
+#     your notification webhook in scoutapp.com.
 #
 
 module.exports = (robot) ->
@@ -45,19 +45,21 @@ module.exports = (robot) ->
     emoji   = if isAlert then ":warning:" else ":thumbsup:"
     fields  = []
 
-    if isAlert
-      fields = [
-          title: "Server Name"
-          value: data.server_name
-          short: true
-        ,
-          title: "Metric"
-          value: "#{data.metric_name} #{data.metric_value}"
-          short: true
-        ]
+    fields = [
+        title: prefix
+        value: data.url
+        short: true
+      ,
+        title: "Server Name"
+        value: data.server_name
+        short: true
+      ,
+        title: data.plugin_name
+        value: data.title
+        short: false
+    ]
 
-    text    = "*#{data.plugin_name}* : #{data.title}"
-    pretext = "*#{prefix}* : <#{data.url}|#{data.id}>"
+    fallback = "#{prefix} : #{data.plugin_name} : #{data.title}"
 
     robot.emit 'slack-attachment',
       message:
@@ -65,10 +67,10 @@ module.exports = (robot) ->
         username:   'scout'
         icon_emoji: emoji
       content:
-        text:     text
+        text:     ''
         color:    color
-        fallback: pretext
-        pretext:  pretext
+        pretext:  ''
+        fallback: fallback
         fields:   fields
 
     # Send back an empty response

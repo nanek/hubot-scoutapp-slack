@@ -1,7 +1,7 @@
 {
   "name": "hubot-scoutapp-slack",
-  "description": "Hubot script for scoutapp.com to emit slack attachement",
-  "version": "0.0.5",
+  "description": "Hubot script for scoutapp.com to emit slack attachment",
+  "version": "0.0.7",
   "author": "Kenan Shifflett <kenan.shifflett@gmail.com>",
   "license": "MIT",
 

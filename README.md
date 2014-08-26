@@ -6,3 +6,9 @@ An attachment has additional formatting options.
 See [`src/scoutapp-slack.coffee`](src/scoutapp-slack.coffee) for documentation.
 
 https://scoutapp.com/info/webhooks#webhooks
+
+# Installation
+
+    npm install hubot-scoutapp-slack
+
+    # Add "hubot-scoutapp-slack" to external-scripts.json
