@@ -1,0 +1,38 @@
+{
+  "name": "hubot-scoutapp-slack",
+  "description": "Hubot script for scoutapp.com to emit slack attachement",
+  "version": "0.0.5",
+  "author": "Kenan Shifflett <kenan.shifflett@gmail.com>",
+  "license": "MIT",
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spanishdict/hubot-scoutapp-slack.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/spanishdict/hubot-scoutapp-slack/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.7"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "script/test"
+  }
+}
