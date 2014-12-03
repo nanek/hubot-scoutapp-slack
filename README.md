@@ -12,3 +12,11 @@ https://scoutapp.com/info/webhooks#webhooks
     npm install hubot-scoutapp-slack
 
     # Add "hubot-scoutapp-slack" to external-scripts.json
+
+# Other hubot slack modules
+
+https://github.com/spanishdict/hubot-awssns-slack
+
+https://github.com/spanishdict/hubot-loggly-slack
+
+https://github.com/spanishdict/hubot-scoutapp-slack
